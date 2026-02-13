@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { ChevronDown, TrendingDown, TrendingUp, AlertCircle, CheckCircle, BarChart3, Flag, Target, FileText, Map } from 'lucide-react';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { TrendingDown, TrendingUp, CheckCircle, BarChart3, Flag, Target, Map } from 'lucide-react';
 
 // Types
 type ProductLine = 'WR' | 'WRX';
@@ -403,9 +403,7 @@ const App: React.FC = () => {
   const [grain, setGrain] = useState<Grain>('Destination');
   const [productLine, setProductLine] = useState<'All' | ProductLine>('All');
   const [filterDestination, setFilterDestination] = useState<string>('All');
-  const [filterItinerary, setFilterItinerary] = useState<string>('All');
   const [filterDMC, setFilterDMC] = useState<string>('All');
-  const [filterCoordinator, setFilterCoordinator] = useState<string>('All');
   const [onlyBelow8, setOnlyBelow8] = useState(true);
 
   const FilterBar = () => (
